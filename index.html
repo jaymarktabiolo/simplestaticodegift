@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gift</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-pattern"></div>
+    <div class="floating-hearts"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">🎉 Happy Birthday! 🎉</h1>
+            <p class="subtitle">A special gift made with love</p>
+        </header>
+
+        <!-- Envelope Section -->
+        <section class="envelope-section">
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-flap" id="envelope-flap"></div>
+                    <div class="letter" id="letter">
+                        <div class="letter-content">
+                            <h2>🎉 Happy Birthday Beautiful! 🎉</h2>
+                            <p>Hope your special day is filled with love and joy!</p>
+                            <p>You are amazing and deserve all the happiness in the world!</p>
+                            <div class="signature">With all💖</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="click-me-btn" id="openEnvelope">Click Me!</button>
+                <!-- Audio element for beautiful moments music -->
+                <audio id="beautifulMomentsMusic" preload="auto">
+    <source src="Rico Blanco - Your Universe.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+            </div>
+        </section>
+
+        <!-- Scrolling Images Section -->
+        <section class="carousel-section">
+            <h2 class="section-title">Beautiful Moments</h2>
+            <div class="reveal-button-container">
+                <button class="reveal-btn" id="showCarouselBtn">
+                    <i class="fas fa-images"></i>
+                    Show Beautiful Moments
+                </button>
+            </div>
+            <div class="carousel-container" id="carouselContainer" style="display: none;">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-item">
+                        <img src="7907a34f-57a8-4db6-8030-15a18afcda03.jfif" alt="Memory 1">
+                        <div class="carousel-caption">🥰</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="bd1cd028-7934-42ab-b71e-081fc3ccf82a.jfif" alt="Memory 2">
+                        <div class="carousel-caption">💚</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="7c663a94-9faa-4362-98e2-38587ec67aea.jfif" alt="Memory 3">
+                        <div class="carousel-caption">🖤😻</div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Cake and Candle Section -->
+        <section class="birthday-section">
+            <div class="birthday-setup">
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="cake-layer cake-bottom"></div>
+                        <div class="cake-layer cake-middle"></div>
+                        <div class="cake-layer cake-top"></div>
+                        <div class="cake-decoration">
+                            <div class="cherry"></div>
+                            <div class="decoration-dots">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candle-container">
+                        <div class="candle">
+                            <div class="candle-body"></div>
+                            <div class="candle-wick"></div>
+                            <div class="flame" id="flame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title">Your Beautiful Memories😻</h2>
+            <div class="reveal-button-container">
+                <button class="reveal-btn" id="showGalleryBtn">
+                    <i class="fas fa-heart"></i>
+                    Show Your Beautiful Memories 😻
+                </button>
+            </div>
+            <div class="gallery-content" id="galleryContent" style="display: none;">
+                <p class="gallery-subtitle">Click on any image to view Your special beautiful face</p>
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery items will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Gallery Images -->
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <img class="modal-image" id="modalImage" src="" alt="">
+                <div class="modal-caption" id="modalCaption"></div>
+                <div class="modal-navigation">
+                    <button class="modal-nav-btn" id="modalPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="modal-nav-btn" id="modalNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop-up Message -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h3>🎉 Special Birthday Message! 🎉</h3>
+                </div>
+                <div class="popup-body">
+                    <p>Another year of wonderful memories and adventures!</p>
+                    <p>Thank you for being such an amazing person.</p>
+                    <div class="popup-hearts">
+                        <span>💖</span><span>💝</span><span>🎂</span><span>🎈</span><span>🌟</span>
+                    </div>
+                </div>
+                <button class="popup-close" id="closePopup">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
